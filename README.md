@@ -10,6 +10,7 @@ If you are using PHP, you can refer to the one I wrote a few years ago on gitee:
 [fsgmhoward/FormCrypt](https://gitee.com/fsgmhoward/FormCrypt)
 
 [![Build Status](https://travis-ci.com/fsgmhoward/formcrypt.go.svg?branch=main)](https://travis-ci.com/fsgmhoward/formcrypt.go)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go?ref=badge_shield)
 
 ## Warning
 
@@ -52,3 +53,5 @@ for exact licensing details.
 Client-side JS codes mainly bases on Tom Wu's JSBN library. Please refer to
 [its website](http://www-cs-students.stanford.edu/~tjw/jsbn/) for licensing
 details.
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go?ref=badge_large)
