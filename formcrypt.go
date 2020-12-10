@@ -88,6 +88,25 @@ func (key *Key) GetJavascriptSegment(formId string, fields []string) string {
 }
 
 /*
+ * decryption related functions
+ */
+
+// decrypts data received from client
+func (key *Key) Decrypt(dataString string) (string, error) {
+	data, err := hex.DecodeString(dataString)
+	if err != nil {
+		return "", err
+	}
+
+	// opts set to nil to use PKCS#1 decryption
+	plaintext, err := key.Key.Decrypt(rand.Reader, data, nil)
+	if err != nil {
+		return "", err
+	}
+	return string(plaintext), nil
+}
+
+/*
  * session related functions
  */
 
@@ -111,6 +130,7 @@ func (key *Key) Store(c *gin.Context, isMany bool) error {
 }
 
 // load the key from the session
+// if key cannot be loaded, it should return an empty key with error
 func Load(c *gin.Context, isMany bool) (Key, error) {
 	key := getSession(c, isMany).Get(DefaultSessionKey)
 	if key == nil {
@@ -124,25 +144,6 @@ func Void(c *gin.Context, isMany bool) error {
 	session := getSession(c, isMany)
 	session.Set(DefaultSessionKey, nil)
 	return session.Save()
-}
-
-/*
- * decryption related functions
- */
-
-// decrypts data received from client
-func (key *Key) Decrypt(dataString string) (string, error) {
-	data, err := hex.DecodeString(dataString)
-	if err != nil {
-		return "", err
-	}
-
-	// opts set to nil to use PKCS#1 decryption
-	plaintext, err := key.Key.Decrypt(rand.Reader, data, nil)
-	if err != nil {
-		return "", err
-	}
-	return string(plaintext), nil
 }
 
 /*

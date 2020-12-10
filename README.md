@@ -9,8 +9,9 @@ generate a ready-to-use snippet for you to directly insert into your webpage.
 If you are using PHP, you can refer to the one I wrote a few years ago on gitee:
 [fsgmhoward/FormCrypt](https://gitee.com/fsgmhoward/FormCrypt)
 
-[![Build Status](https://travis-ci.com/fsgmhoward/formcrypt.go.svg?branch=main)](https://travis-ci.com/fsgmhoward/formcrypt.go)
+[![Build Status](https://travis-ci.com/fsgmhoward/formcrypt.go.svg?branch=master)](https://travis-ci.com/fsgmhoward/formcrypt.go)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffsgmhoward%2Fformcrypt.go?ref=badge_shield)
+[![gopherbadger-tag-do-not-edit](https://img.shields.io/badge/Go%20Coverage-74%25-brightgreen.svg?longCache=true&style=flat)](https://github.com/jpoles1/gopherbadger)
 
 ## Warning
 
