@@ -4,6 +4,9 @@ language: go
 
 go:
   - 1.14.x
+  - 1.15.x
+  - 1.16.x
+  - 1.17.x
 
 env:
   - GO111MODULE=on
@@ -12,3 +15,5 @@ env:
 script:
   - go test -v ./...
   - diff -u <(echo -n) <(gofmt -d -s .)
+  - cd _example
+  - go build -v

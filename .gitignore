@@ -5,3 +5,6 @@ formcrypt.go.iml
 # ignore png-format coverage badge and coverage report
 coverage.out
 coverage_badge.png
+
+# ignore executable for example
+_example/_example
